@@ -1,7 +1,7 @@
 # Operating System Concepts
 # Scheduling Algorithms
 
-# Round Robin
+## Round Robin
 
 Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way.
 * It is simple, easy to implement, and starvation-free as all processes get fair share of CPU.
@@ -13,7 +13,7 @@ and interrupting the job if it is not completed by then. The job is resumed next
 If the process terminates or changes its state to waiting during its attributed time quantum, the scheduler selects the first process in the ready queue to execute.
 In the absence of time-sharing, or if the quanta were large relative to the sizes of the jobs, a process that produced large jobs would be favoured over other processes.
 
-# Shortest Job First (SJF)
+## Shortest Job First (SJF)
 
 Shortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting process with the smallest execution time to execute next. SJF is a non-preemptive algorithm.
 
@@ -22,14 +22,14 @@ Shortest Job first has the advantage of having a minimum average waiting time am
 * It may cause starvation if shorter processes keep coming. This problem can be solved using the concept of ageing.
 * It is practically infeasible as Operating System may not know burst time and therefore may not sort them. While it is not possible to predict execution time, several methods can be used to estimate the execution time for a job, such as a weighted average of previous execution times. SJF can be used in specialized environments where accurate estimates of running time are available.
 
-** Algorithm:
+### Algorithm:
 
 Sort all the process according to the arrival time.
 Then select that process which has minimum arrival time and minimum Burst time.
 After completion of process make a pool of process which after till the completion of previous process and select that process among the pool which is having minimum Burst time.
 
 
-# Shortest Reamaining Time First (SRTF)
+## Shortest Reamaining Time First (SRTF)
 
 Shortest remaining time, also known as shortest remaining time first (SRTF), is a scheduling method that is a preemptive version of shortest job next scheduling.
 In this scheduling algorithm, the process with the smallest amount of time remaining until completion is selected to execute. Since the currently executing process is the one with the shortest amount of time remaining by definition, and since that time should only reduce as execution progresses, processes will always run until they complete or a new process is added that requires a smaller amount of time.
